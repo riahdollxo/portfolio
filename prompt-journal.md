@@ -21,10 +21,10 @@ For each entry, note:
 ### Entry 1
 - **Feature/task:** 
 - **Copilot feature used:** 
-- **Prompt:**
+- **Prompt:** Wite me a tagline. I am a Junior Computer Science Major at FAMU and I am passionate about sustainable AI.
   > 
-- **Result:** 
-- **What I changed or did next:** 
+- **Result:** Junior CS major at FAMU passionate about building sustainable AI solutions.
+- **What I changed or did next:** I accepted this suggestion but I may actually go back and change it.
 
 ---
 

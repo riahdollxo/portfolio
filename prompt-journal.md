@@ -30,21 +30,18 @@ For each entry, note:
 
 ## Phase 2 — Guided Tasks
 
-### Entry 2 — About section
-- **Copilot feature used:** 
-- **Prompt:**
-  > 
-- **Result:** 
-- **What I changed or did next:** 
-
+### Entry 2 — Tagline
+- **Copilot feature used:** ASK
+- **Prompt:** Write me a tagline. I am a Junior Computer Science Major at FAMU and I am passionate about sustainable AI.
+- **Result:** Junior CS major at FAMU passionate about building sustainable AI solutions.
+- **What I changed or did next:** Accepted the suggestion and updated it in the hero section.
 ---
 
-### Entry 3 — Projects
-- **Copilot feature used:** 
-- **Prompt:**
-  > 
-- **Result:** 
-- **What I changed or did next:** 
+### Entry 3 — About Section
+- **Copilot feature used:** ASK
+- **Prompt:** Write a short professional bio for a CS student interested in software development, cybersecurity, and AI. Include that I run a nails business and a styling business too.
+- **Result:** Got a bio that incorporated all my interests and side businesses.
+- **What I changed or did next:** Customized it to match my voice and added specific details about FAMU.
 
 ---
 

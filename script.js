@@ -6,25 +6,25 @@
 // ============================================================
 const projects = [
   {
-    title: "Project One",
-    description: "A short description of what this project does and why you built it.",
-    tags: ["Python", "Flask"],
-    github: "https://github.com/yourusername/project-one",
-    demo: null,
+    title: "🌻 Bloom Break",
+    description: "A wellness-focused desktop companion that encourages mindful breaks, healthy habits, and balanced productivity. Features Sunnie, an interactive sunflower companion, combining wellness, playful design, and technology.",
+    tags: ["Wellness", "Desktop App", "UI/UX", "JavaScript"],
+    demo: "https://lovable.dev/projects/44e6f22f-0410-4f4e-aecc-ff9f21632e37",
+    github: null,
   },
   {
-    title: "Project Two",
-    description: "Another project you're proud of. What problem did it solve?",
-    tags: ["JavaScript", "React"],
-    github: "https://github.com/yourusername/project-two",
-    demo: "https://yourproject.netlify.app",
+    title: "🛒 Stocked Up",
+    description: "A smart grocery and pantry management application that helps users reduce food waste, stay organized, and make smarter shopping decisions with inventory tracking and meal planning.",
+    tags: ["Web App", "React", "AI", "Sustainability"],
+    demo: "https://cozy-inventory-ai.lovable.app/",
+    github: null,
   },
   {
-    title: "Project Three",
-    description: "Keep it brief — one or two sentences is plenty.",
-    tags: ["Java", "Algorithms"],
-    github: "https://github.com/yourusername/project-three",
-    demo: null,
+    title: "💧 FreshWater Finder",
+    description: "A sustainability-focused application that helps users discover and learn about freshwater resources in their communities, combining technology and environmental awareness.",
+    tags: ["Web App", "Environmental Tech", "GIS", "Community"],
+    demo: "https://fresh-water-spotter.lovable.app/",
+    github: null,
   },
 ];
 

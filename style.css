@@ -199,11 +199,18 @@ a:hover {
   justify-content: center;
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("images/IMG_7931.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
   max-width: 700px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -219,8 +226,16 @@ a:hover {
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: var(--color-text-muted);
+  color: #fff;
   margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: #fff;
+}
+
+.hero .highlight {
+  color: var(--color-accent);
 }
 
 /* ============================================================

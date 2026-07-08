@@ -226,6 +226,44 @@ function initExtraEasterEggs() {
   });
 }
 
+function initLavaWordEgg() {
+  const htmlElement = document.documentElement;
+  const targetWord = "LAVA";
+  let typed = "";
+  let resetTimer = null;
+  let activeTimer = null;
+
+  function triggerLavaMode() {
+    activateTemporaryMode(htmlElement, "lava-mode", 5000);
+
+    if (activeTimer) clearTimeout(activeTimer);
+    activeTimer = setTimeout(() => {
+      htmlElement.classList.remove("lava-mode");
+    }, 5000);
+  }
+
+  document.addEventListener("keydown", (event) => {
+    const activeElement = document.activeElement;
+
+    if (event.metaKey || event.ctrlKey || event.altKey) return;
+    if (event.key.length !== 1) return;
+    if (activeElement && ["INPUT", "TEXTAREA"].includes(activeElement.tagName)) return;
+    if (activeElement && activeElement.isContentEditable) return;
+
+    typed = (typed + event.key.toUpperCase()).slice(-targetWord.length);
+
+    if (resetTimer) clearTimeout(resetTimer);
+    resetTimer = setTimeout(() => {
+      typed = "";
+    }, 1000);
+
+    if (typed === targetWord) {
+      typed = "";
+      triggerLavaMode();
+    }
+  });
+}
+
 // ============================================================
 // INIT
 // ============================================================
@@ -236,4 +274,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initTripMode();
   initExtraEasterEggs();
+  initLavaWordEgg();
 });

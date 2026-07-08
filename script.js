@@ -133,6 +133,53 @@ function updateButtonText(theme) {
 }
 
 // ============================================================
+// TRIP MODE EASTER EGG
+// ============================================================
+function initTripMode() {
+  const logo = document.getElementById("logo-easter-egg");
+  const htmlElement = document.documentElement;
+
+  if (!logo) return;
+
+  let clickCount = 0;
+  let clickResetTimer = null;
+  let tripModeTimer = null;
+
+  function activateTripMode() {
+    htmlElement.classList.add("trip-mode");
+
+    if (tripModeTimer) clearTimeout(tripModeTimer);
+    tripModeTimer = setTimeout(() => {
+      htmlElement.classList.remove("trip-mode");
+    }, 5200);
+  }
+
+  function registerTrigger() {
+    clickCount += 1;
+
+    if (clickResetTimer) clearTimeout(clickResetTimer);
+
+    if (clickCount >= 3) {
+      clickCount = 0;
+      activateTripMode();
+      return;
+    }
+
+    clickResetTimer = setTimeout(() => {
+      clickCount = 0;
+    }, 900);
+  }
+
+  logo.addEventListener("click", registerTrigger);
+  logo.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      registerTrigger();
+    }
+  });
+}
+
+// ============================================================
 // INIT
 // ============================================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -140,4 +187,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSkills();
   updateYear();
   initTheme();
+  initTripMode();
 });

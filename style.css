@@ -257,18 +257,18 @@ a:hover {
   width: 240px;
   height: 340px;
   top: 4%;
-  right: 5%;
+  right: 7%;
   border-radius: 56% 44% 52% 48% / 46% 54% 46% 54%;
   animation: lava-blob-2 38s ease-in-out infinite;
   animation-delay: -16s;
 }
 
 .lava-lamp span:nth-child(3) {
-  width: 360px;
-  height: 420px;
-  top: 18%;
-  right: 11%;
-  border-radius: 44% 56% 42% 58% / 58% 32% 68% 42%;
+  width: 340px;
+  height: 430px;
+  top: 16%;
+  left: 34%;
+  border-radius: 46% 54% 40% 60% / 54% 34% 66% 46%;
   animation: lava-blob-3 44s ease-in-out infinite;
   animation-delay: -22s;
 }
@@ -281,6 +281,16 @@ a:hover {
   border-radius: 60% 40% 56% 44% / 44% 56% 44% 56%;
   animation: lava-blob-4 36s ease-in-out infinite;
   animation-delay: -12s;
+}
+
+.lava-lamp span:nth-child(5) {
+  width: 260px;
+  height: 320px;
+  top: 36%;
+  left: 46%;
+  border-radius: 50% 50% 62% 38% / 56% 38% 62% 44%;
+  animation: lava-blob-5 40s ease-in-out infinite;
+  animation-delay: -24s;
 }
 
 .hero-content {
@@ -416,6 +426,27 @@ a:hover {
   100% {
     transform: translate(0, -24px) scale(0.96) scaleY(0.84);
     border-radius: 60% 40% 56% 44% / 44% 56% 44% 56%;
+  }
+}
+
+@keyframes lava-blob-5 {
+  0% {
+    transform: translate(0, 40px) scale(0.96) scaleY(0.9);
+    border-radius: 50% 50% 62% 38% / 56% 38% 62% 44%;
+  }
+  30% {
+    transform: translate(-18px, -12px) scale(1.02) scaleY(0.96);
+  }
+  55% {
+    transform: translate(14px, -84px) scale(1.12) scaleY(1.12);
+    border-radius: 58% 42% 42% 58% / 38% 58% 42% 62%;
+  }
+  80% {
+    transform: translate(-10px, 10px) scale(1.01) scaleY(0.92);
+  }
+  100% {
+    transform: translate(0, 40px) scale(0.96) scaleY(0.9);
+    border-radius: 50% 50% 62% 38% / 56% 38% 62% 44%;
   }
 }
 

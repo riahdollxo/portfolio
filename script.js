@@ -133,6 +133,24 @@ function updateButtonText(theme) {
 }
 
 // ============================================================
+// HIDDEN MODES
+// ============================================================
+function activateTemporaryMode(htmlElement, className, duration) {
+  if (!htmlElement) return;
+
+  const timerKey = `${className}Timer`;
+
+  if (htmlElement[timerKey]) {
+    clearTimeout(htmlElement[timerKey]);
+  }
+
+  htmlElement.classList.add(className);
+  htmlElement[timerKey] = setTimeout(() => {
+    htmlElement.classList.remove(className);
+  }, duration);
+}
+
+// ============================================================
 // TRIP MODE EASTER EGG
 // ============================================================
 function initTripMode() {
@@ -179,6 +197,35 @@ function initTripMode() {
   });
 }
 
+function initExtraEasterEggs() {
+  const htmlElement = document.documentElement;
+  const logo = document.getElementById("logo-easter-egg");
+  const darkModeBtn = document.getElementById("dark-mode-btn");
+
+  if (logo) {
+    logo.addEventListener("dblclick", (event) => {
+      event.preventDefault();
+      activateTemporaryMode(htmlElement, "mirror-mode", 4200);
+    });
+  }
+
+  if (darkModeBtn) {
+    darkModeBtn.addEventListener("click", (event) => {
+      if (!event.altKey) return;
+      event.preventDefault();
+      activateTemporaryMode(htmlElement, "static-mode", 4800);
+    }, true);
+  }
+
+  document.querySelectorAll(".accent-swatch").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      if (!event.shiftKey) return;
+      event.preventDefault();
+      activateTemporaryMode(htmlElement, "prism-mode", 5000);
+    }, true);
+  });
+}
+
 // ============================================================
 // INIT
 // ============================================================
@@ -188,4 +235,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updateYear();
   initTheme();
   initTripMode();
+  initExtraEasterEggs();
 });

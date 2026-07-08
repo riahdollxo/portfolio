@@ -380,6 +380,58 @@ html.trip-mode .nav-logo {
   text-shadow: 0 0 14px color-mix(in srgb, var(--color-accent) 40%, transparent 60%);
 }
 
+html.mirror-mode .lava-lamp {
+  transform: scaleX(-1) skewX(-2deg);
+  filter: hue-rotate(140deg) saturate(2.1) brightness(1.06);
+}
+
+html.mirror-mode .hero-content {
+  animation: mirror-waver 1.8s ease-in-out infinite;
+}
+
+html.mirror-mode .hero-content h1,
+html.mirror-mode .hero-subtitle,
+html.mirror-mode .hero .btn {
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 24px color-mix(in srgb, var(--color-accent) 42%, transparent 58%);
+}
+
+html.static-mode .hero {
+  animation-duration: 7s;
+}
+
+html.static-mode .lava-lamp {
+  filter: hue-rotate(300deg) saturate(2.6) brightness(1.08) contrast(1.1);
+}
+
+html.static-mode .lava-lamp span {
+  animation-duration: 8s !important;
+  opacity: 0.42;
+}
+
+html.static-mode .hero-content {
+  animation: static-flicker 1.6s steps(2, end) infinite;
+}
+
+html.prism-mode .lava-lamp {
+  filter: hue-rotate(220deg) saturate(2.8) brightness(1.1);
+}
+
+html.prism-mode .hero,
+html.prism-mode .scroll-banner {
+  filter: hue-rotate(130deg) saturate(2.3);
+}
+
+html.prism-mode .hero-content h1,
+html.prism-mode .hero-subtitle,
+html.prism-mode .hero .btn {
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.45),
+    0 0 18px color-mix(in srgb, var(--color-accent) 50%, transparent 50%),
+    0 0 30px color-mix(in srgb, var(--color-accent) 28%, transparent 72%);
+}
+
 @keyframes trip-float {
   0%,
   100% {
@@ -387,6 +439,26 @@ html.trip-mode .nav-logo {
   }
   50% {
     transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@keyframes mirror-waver {
+  0%,
+  100% {
+    transform: translateX(0) skewX(0deg);
+  }
+  50% {
+    transform: translateX(5px) skewX(-1.5deg);
+  }
+}
+
+@keyframes static-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.92;
   }
 }
 

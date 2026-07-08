@@ -227,7 +227,6 @@ a:hover {
   opacity: 0.32;
   mix-blend-mode: screen;
   filter: blur(12px) saturate(1.25) brightness(1.08);
-  box-shadow: 0 0 70px color-mix(in srgb, var(--color-accent) 72%, transparent 28%);
   will-change: transform;
 }
 

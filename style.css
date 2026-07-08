@@ -501,4 +501,42 @@ footer {
     height: 100px;
   }
 
+} 
+
+.scroll-banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 0;
 }
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.scroll-track span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  padding-right: 50px;
+  opacity: 0.85;
+}
+
+/* makes the text glide forever */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-track span {
+  color: var(--accent-color);
+} 
+
+

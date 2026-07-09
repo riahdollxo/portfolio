@@ -166,6 +166,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.45rem;
   border-radius: 999px;
   transition: background var(--transition), box-shadow var(--transition);
 }
@@ -208,6 +209,13 @@ a:hover {
   line-height: 1;
 }
 
+.switch-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
 [data-theme="dark"] .switch-track {
   background: color-mix(in srgb, var(--color-accent) 20%, var(--color-bg-alt));
 }
@@ -218,6 +226,10 @@ a:hover {
 
 [data-theme="dark"] .switch-thumb::before {
   content: "🌙";
+}
+
+[data-theme="dark"] .switch-label {
+  color: var(--color-accent);
 }
 
 .theme-controls {

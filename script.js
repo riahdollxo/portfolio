@@ -129,7 +129,12 @@ function initTheme() {
 
 function updateButtonText(theme) {
   const darkModeBtn = document.getElementById("dark-mode-btn");
+  const switchLabel = darkModeBtn.querySelector(".switch-label");
+
   darkModeBtn.setAttribute("aria-checked", theme === "dark" ? "true" : "false");
+  if (switchLabel) {
+    switchLabel.textContent = theme === "dark" ? "Dark Mode" : "Light Mode";
+  }
 }
 
 function logEasterEgg(modeName, emoji) {

@@ -196,8 +196,16 @@ a:hover {
   height: 20px;
   background: var(--color-accent);
   border-radius: 50%;
+  display: grid;
+  place-items: center;
   transform: translateX(0);
   transition: transform var(--transition), background var(--transition);
+}
+
+.switch-thumb::before {
+  content: "☀️";
+  font-size: 11px;
+  line-height: 1;
 }
 
 [data-theme="dark"] .switch-track {
@@ -206,6 +214,10 @@ a:hover {
 
 [data-theme="dark"] .switch-thumb {
   transform: translateX(22px);
+}
+
+[data-theme="dark"] .switch-thumb::before {
+  content: "🌙";
 }
 
 .theme-controls {
